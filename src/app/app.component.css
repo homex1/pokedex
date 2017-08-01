@@ -1,5 +1,5 @@
 .pokemones {
-    background-color: #CFD8DC !important;    
+    background-color: #CFD8DC !important;
 }
 .selected {
   background-color: #CFD8DC !important;
@@ -9,4 +9,12 @@ div.pokemon {}
 img.pokemon {
   height: 55px;
   cursor: pointer;
+}
+
+.pokedex {
+  background-image: url("/assets/images/pokedex.png");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
 }
