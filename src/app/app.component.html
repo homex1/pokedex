@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-7">
+  <div class="col-sm-7 pokemones">
     <div class="col-sm-1" *ngFor="let pokemon of pokemones">
       <img class="pokemon" (click)="onSelect(pokemon)" src={{pokemon.image}} title={{pokemon.name}}/>
     </div>

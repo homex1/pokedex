@@ -1,8 +1,12 @@
+.pokemones {
+    background-color: #CFD8DC !important;    
+}
 .selected {
   background-color: #CFD8DC !important;
   color: white;
 }
-.pokemon {
+div.pokemon {}
+img.pokemon {
   height: 55px;
   cursor: pointer;
 }
