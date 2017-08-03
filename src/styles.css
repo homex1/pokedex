@@ -1,7 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: #FE0000 !important;
+
 }
 header {
-  margin: 10px 0;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background-color: #FE0000 !important;
+}
+
+footer {
+  background-color: #FE0000 !important;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+  line-height: 60px;
+  color: #FFF;
 }

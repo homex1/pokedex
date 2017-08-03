@@ -3,7 +3,7 @@ import { Pokemon } from './pokemon';
 import { PokemonService } from './pokemon.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'pokemones',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [PokemonService]

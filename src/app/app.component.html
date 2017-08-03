@@ -1,20 +1,26 @@
 <div class="row">
-  <div class="col-sm-7 pokemones">
-    <div class="col-sm-1" *ngFor="let pokemon of pokemones">
+  <div class="col-sm-6 col-sm-offset-1 pokemones">
+    <div class="col-xs-1" *ngFor="let pokemon of pokemones">
       <img class="pokemon" (click)="onSelect(pokemon)" src={{pokemon.image}} title={{pokemon.name}}/>
     </div>
   </div>
-
-  <div class="col-sm-5" style="position:relative">
-    <div *ngIf="pokemon" class="pokedex">
-      <img style="height: 90px;" src={{pokemon.image}}/>
-      <ul class="heroes">
-        <li>
-          <span class="badge">{{pokemon.pokedex}}</span>{{pokemon.name}}
-        </li>
-        <li>{{pokemon.kind1}}</li>
-        <li>{{pokemon.kind2}}</li>
-      </ul>
+  <div class="col-sm-4">
+    <div class="pokedex">
+      <div *ngIf="pokemon">
+        <span class="pokedex-number">
+          {{pokemon.pokedex}}
+        </span>
+        <div class="image">
+          <img src={{pokemon.image}}/>
+        </div>
+        <div class="name">
+          {{pokemon.name}}
+        </div>
+        <ul class="kinds">
+          <li>{{pokemon.kind1}}</li>
+          <li>{{pokemon.kind2}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
