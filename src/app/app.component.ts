@@ -14,14 +14,14 @@ export class AppComponent implements OnInit {
   pokemones: Pokemon[];
   pokemon: Pokemon;
 
-  constructor(private heroService: PokemonService) { }
+  constructor(private pokemonService: PokemonService) { }
 
   ngOnInit(): void {
     this.getPokemones();
   }
 
   getPokemones(): void {
-    this.heroService.getPokemones().then(pokemones => this.pokemones = pokemones);
+    this.pokemonService.getPokemones().then(pokemones => this.pokemones = pokemones);
   }
 
   onSelect(pokemon: Pokemon): void {

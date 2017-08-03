@@ -1,13 +1,18 @@
 import { TestBed, async } from '@angular/core/testing';
-
 import { AppComponent } from './app.component';
+import { Pokemon } from './pokemon';
+import { PokemonService } from './pokemon.service';
+import { HttpModule } from '@angular/http';
 
 describe('AppComponent', () => {
+  var fixture = {};
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
+      imports: [HttpModule]
     }).compileComponents();
   }));
 
@@ -20,13 +25,29 @@ describe('AppComponent', () => {
   it(`should have as title 'app'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
+    expect(app.title).toEqual('Pokedex');
   }));
 
-  it('should render title in a h1 tag', async(() => {
+
+  it('should be # 151 pokemones', (done) => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
-  }));
+    const app = fixture.debugElement.componentInstance;
+    app.getPokemones();
+
+    setTimeout(() => {
+      expect(app.pokemones.length).toEqual(151);
+      done();
+    }, 1000);
+  });
+
+  it('should be # 151 pokemones', (done) => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.getPokemones();
+
+    setTimeout(() => {
+      expect(app.pokemones.length).toEqual(152);
+      done();
+    }, 1000);
+  });
 });
