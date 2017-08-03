@@ -22,6 +22,7 @@ img.pokemon {
   width: 100%;
   height: 600px;
   min-width: 420px;
+  max-width: 420px;
 }
 
 .pokedex .pokedex-number {
