@@ -42,7 +42,57 @@ img.pokemon {
   font-size: 18px;
 }
 .pokedex .kinds {
-  padding-left: 150px;
-  font-size: 14px;
+  padding-left: 140px;
+  font-size: 18px;
   padding-top: 20px;
+}
+
+.planta {
+  background-color:  #75dc14;
+}
+
+.veneno {
+  background-color:  #b011f0;
+}
+
+.fuego {
+  background-color:  #f01411;
+}
+
+.volador {
+  background-color:  #b4e6fa;
+  color: #0589f6;
+}
+
+.agua {
+  background-color:  #0068ff;
+}
+
+.bicho {
+  background-color:  #829933;
+}
+
+.normal {
+  background-color:  #dccbdb;
+}
+
+.eléctrico {
+  background-color:  #f1f51c;
+  color: #4f4f4f;
+}
+.tierra {
+  background-color:  #7a5300;
+}
+
+.hada {
+  background-color:  #ff52e2;
+}
+
+.lucha {
+  background-color:  #565656;
+}
+
+.psíquico {
+  background-color:  #9e1bbe;
+  color: #000000;
 }

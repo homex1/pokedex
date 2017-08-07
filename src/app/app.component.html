@@ -14,11 +14,13 @@
           <img src={{pokemon.image}}/>
         </div>
         <div class="name">
-          {{pokemon.name}}
+          {{pokemon.name}} {{pokemon.mote}}
         </div>
         <ul class="kinds">
-          <li class={{pokemon.kind1}}>{{pokemon.kind1}}</li>
-          <li>{{pokemon.kind2}}</li>
+          <span class="label {{pokemon.kind1 | lowercase}}">{{pokemon.kind1}}</span>
+          <br/>
+          <span class="label {{pokemon.kind2 | lowercase}}">{{pokemon.kind2}}</span>
+          <!--<span class="label {{pokemon.kind2}}">{{pokemon.kind2}}</li>-->
         </ul>
       </div>
     </div>
