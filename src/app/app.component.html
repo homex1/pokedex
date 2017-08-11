@@ -8,21 +8,33 @@
     <div class="pokedex">
       <div *ngIf="pokemon">
         <span class="pokedex-number">
-          {{pokemon.pokedex}}
+          <h4>{{pokemon.pokedex}}</h4>
         </span>
+        <div class="name">
+          <h2>{{pokemon.name}}</h2>
+        </div>
         <div class="image">
           <img src={{pokemon.image}}/>
         </div>
-        <div class="name">
-          {{pokemon.name}} {{pokemon.mote}}
+        <div class="mote">
+          <div>
+            <input class="pokemon" [(ngModel)]="pokemon.mote" placeholder="{{pokemon.name}}"/>
+            <!--<h4>Mote: {{pokemon.mote || pokemon.name}}</h4>-->
+          </div>
         </div>
-        <ul class="kinds">
+        <div class="kinds">
           <span class="label {{pokemon.kind1 | lowercase}}">{{pokemon.kind1}}</span>
           <br/>
           <span class="label {{pokemon.kind2 | lowercase}}">{{pokemon.kind2}}</span>
-          <!--<span class="label {{pokemon.kind2}}">{{pokemon.kind2}}</li>-->
-        </ul>
+
+          <button class="cancel"></button>
+          <button class="save"></button>
+
+        </div>
       </div>
     </div>
+
+
+
   </div>
 </div>

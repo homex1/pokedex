@@ -1,54 +1,7 @@
-.pokemones {
-  background-image: url("/assets/images/pokeball.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.selected {
-  background-color: #CFD8DC !important;
-  color: white;
-}
 
-img.pokemon {
-  height: 55px;
-  cursor: pointer;
-}
-
-
-/* Pokedex */
-.pokedex {
-  background-image: url("/assets/images/pokedex.png");
-  background-position: center top;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 600px;
-  min-width: 420px;
-  max-width: 420px;
-}
-
-.pokedex .pokedex-number {
-  font-size: 18px;
-  line-height: 85px;
-  padding-left: 58px;
-}
-.pokedex .image {
-  text-align: center;
-  padding-top: 40px;
-}
-.pokedex .image img {
-  height: 180px;
-}
-.pokedex .name {
-  padding: 143px 45px 0;
-  font-size: 18px;
-}
-.pokedex .kinds {
-  padding-left: 140px;
-  font-size: 18px;
-  padding-top: 20px;
-}
 
 .planta {
-  background-color:  #75dc14;
+  background-color:  #348E39;
 }
 
 .veneno {
@@ -94,5 +47,30 @@ img.pokemon {
 
 .psíquico {
   background-color:  #9e1bbe;
+  color: #F9E022;
+}
+
+.roca{
+  background-color:  #D5D5D5;
+  color: #000000;
+}
+
+.acero{
+  background-color:  #FFFFFF;
+  color: #7B7B7B;
+}
+
+.hielo{
+  background-color:  #B0FFFF;
+  color: #0525F2;
+}
+
+.fantasma{
+  background-color:  #000000;
+  color: #A821E2;
+}
+
+.dragón{
+  background-color:  #FFC000;
   color: #000000;
 }
