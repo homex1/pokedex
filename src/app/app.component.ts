@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'Pokedex';
   pokemones: Pokemon[];
   pokemon: Pokemon;
+  original_pokemon: Pokemon;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -24,7 +25,21 @@ export class AppComponent implements OnInit {
     this.pokemonService.getPokemones().then(pokemones => this.pokemones = pokemones);
   }
 
-  onSelect(pokemon: Pokemon): void {
-    this.pokemon = pokemon;
+  save(): void {
+    this.pokemonService.update(this.pokemon)
+      .then(() => alert("Pokemon guardado"));
+      this.pokemon = null;
+
   }
+
+  cancel(): void {
+    this.pokemon = this.original_pokemon;
+  }
+
+  onSelect(pokemon: Pokemon): void {
+    this.original_pokemon = pokemon;
+    this.pokemon = pokemon;
+    //this.pokemon = Object.assign({}, pokemon);
+  }
+
 }
