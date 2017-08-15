@@ -76,9 +76,15 @@ img.pokemon {
 .pokedex .kinds {
   padding-left: 140px;
   font-size: 14px;
-  padding-top: 23px;
+  padding-top: 25px;
   width: 60px;
 }
+.pokedex .kinds .kind {
+
+  margin-bottom: 10px;
+
+}
+
 .pokedex .kinds input {
   width: 80px;
   border: none;
@@ -86,6 +92,7 @@ img.pokemon {
   -moz-border-radius: 5px;
   border-radius: 5px;
   text-align: center;
+  font-weight: bold;
 }
 
 button.save{

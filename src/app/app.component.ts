@@ -27,18 +27,32 @@ export class AppComponent implements OnInit {
 
   save(): void {
     this.pokemonService.update(this.pokemon)
-      .then(pokemon => alert("Pokemon guardado"));
+      .then(pokemon => {
+          this.pokemones[pokemon.id - 1] = pokemon;
+          alert("Pokemon guardado");});
       this.pokemon = null;
 
   }
 
   cancel(): void {
+    console.log(this.pokemon);
+    console.log(this.original_pokemon);
+
     this.pokemon = this.original_pokemon;
+
+    console.log(this.pokemon);
   }
 
   onSelect(pokemon: Pokemon): void {
-    this.original_pokemon = pokemon;
-    this.pokemon = pokemon;
+    console.log(this.pokemon);
+    console.log(this.original_pokemon);
+    console.log(Object.assign({}, pokemon));
+
+    this.original_pokemon =  pokemon;
+    this.pokemon = Object.assign({}, pokemon);
+
+    console.log(this.pokemon);
+    console.log(this.original_pokemon);
     //this.pokemon = Object.assign({}, pokemon);
   }
 

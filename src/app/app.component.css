@@ -2,14 +2,17 @@
 
 .planta {
   background-color:  #348E39;
+  color: #FFFFFF;
 }
 
 .veneno {
   background-color:  #b011f0;
+  color: #FFFFFF;
 }
 
 .fuego {
   background-color:  #f01411;
+  color: #FFFFFF;
 }
 
 .volador {
@@ -19,14 +22,17 @@
 
 .agua {
   background-color:  #0068ff;
+  color: #FFFFFF;
 }
 
 .bicho {
   background-color:  #829933;
+  color: #FFFFFF;
 }
 
 .normal {
   background-color:  #dccbdb;
+  color: #FFFFFF;
 }
 
 .eléctrico {
@@ -35,10 +41,12 @@
 }
 .tierra {
   background-color:  #7a5300;
+  color: #FFFFFF;
 }
 
 .hada {
   background-color:  #ff52e2;
+  color: #FFFFFF;
 }
 
 .lucha {
@@ -78,6 +86,6 @@
 }
 
 .default{
-  background-color: none;
+  background-color: transparent;
   color: none;
 }
