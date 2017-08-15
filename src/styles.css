@@ -107,9 +107,49 @@ button.cancel{
   right: 56px;
   border: none;
 }
+button.left{
+  bottom: 58px;
+  left: 35px;
+  width: 28px;
+  height: 26px;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+}
+button.right{
+  bottom: 58px;
+  left: 85px;
+  width: 28px;
+  height: 26px;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+}
+
+button.up{
+  bottom: 80px;
+  left: 60px;
+  width: 28px;
+  height: 26px;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+}
+button.down{
+  bottom: 35px;
+  left: 60px;
+  width: 28px;
+  height: 26px;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+}
 
 input.pokemon{
   width: 300px;
   background-color: transparent;
   border: none;
+}
+.selected {
+  background-color: gray;
 }

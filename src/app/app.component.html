@@ -1,7 +1,9 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-1 pokemones">
-    <div class="col-xs-1" *ngFor="let pokemon of pokemones" (click)="onSelect(pokemon)">
-      <img class="pokemon"  src={{pokemon.image}} title={{pokemon.name}}/>
+    <div class="col-xs-1"
+      *ngFor="let item of pokemones; let i = index"
+      (click)="onSelect(item, i)">
+      <img class="pokemon" src={{item.image}} title={{item.name}} [class.selected] = "item === this.pokemon"/>
     </div>
   </div>
   <div class="col-sm-4">
@@ -19,24 +21,19 @@
         <div class="mote">
           <div>
             <input class="pokemon" [(ngModel)]="pokemon.mote" placeholder="{{pokemon.name}}"/>
-            <!--<h4>Mote: {{pokemon.mote || pokemon.name}}</h4>-->
           </div>
         </div>
         <div class="kinds">
           <input class="{{pokemon.kind1 | lowercase}}" [(ngModel)]="pokemon.kind1" placeholder="Tipo"/>
-          <!--<span class="label {{pokemon.kind1 | lowercase}}">{{pokemon.kind1}}</span>-->
-          <br/>
           <input class="{{(pokemon.kind2 | lowercase) || 'default' }}" [(ngModel)]="pokemon.kind2" placeholder="Tipo"/>
-          <!--<span class="label {{pokemon.kind2 | lowercase}}">{{pokemon.kind2}}</span>-->
-
           <button class="cancel" (click)="cancel()"></button>
           <button class="save" (click)="save()"></button>
-
+          <button class="left"  (click)="direction('l')"></button>
+          <button class="right" (click)="direction('r')"></button>
+          <button class="up"    (click)="direction('u')"></button>
+          <button class="down"  (click)="direction('d')"></button>
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>

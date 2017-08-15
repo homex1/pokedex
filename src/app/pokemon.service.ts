@@ -20,7 +20,6 @@ export class PokemonService {
 
   update(pokemon: Pokemon): Promise<Pokemon> {
     const url = `${this.baseUrl}/${pokemon.pokedex}`;
-    //console.log(pokemon.pokedex);
     return this.http
       .put(url, JSON.stringify(pokemon), {headers: this.headers})
       .toPromise()
@@ -29,15 +28,13 @@ export class PokemonService {
   }
 
   private handleError(error: any): Promise<any> {
-    var errors = JSON.stringify(error._body);
-    console.log(errors['kind1']);
+    var errors   = error.json();
+    var messages = [];
 
-    if(error._body !== undefined)
-    {
-      alert('An error occurred: ' + error._body);
+    for(var attr in errors) {
+      messages.push(attr + ' - ' + errors[attr])
     }
-    //alert('An error occurred: ' + error);
-    console.error('An error occurred', error._body);
+    alert("Error: \n \n" + messages.join("\n"));
     return Promise.reject(error.message || error);
   }
 }
