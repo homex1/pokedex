@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-1 pokemones">
+    <div class="col-xs-1"
+      *ngFor="let item of pokemones; let i = index"
+      (click)="onSelect(item, i)">
+      <img class="pokemon" src={{item.image}} title={{item.name}} [class.selected] = "item === this.pokemon"/>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="pokedex">
+      <div *ngIf="pokemon">
+        <span class="pokedex-number">
+          <h4>{{pokemon.pokedex}}</h4>
+        </span>
+        <div class="name">
+          <h2>{{pokemon.name}}</h2>
+        </div>
+        <div class="image">
+          <img src={{pokemon.image}}/>
+        </div>
+        <div class="mote">
+          <div>
+            <input class="pokemon" [(ngModel)]="pokemon.mote" placeholder="{{pokemon.name}}"/>
+          </div>
+        </div>
+        <div class="kinds">
+<<<<<<< HEAD
+          <input class="{{pokemon.kind1 | lowercase}}" [(ngModel)]="pokemon.kind1" placeholder="Tipo"/>
+          <input class="{{(pokemon.kind2 | lowercase) || 'default' }}" [(ngModel)]="pokemon.kind2" placeholder="Tipo"/>
+=======
+          <input class="{{(pokemon.kind1 | lowercase) || 'default'}} kind" [(ngModel)]="pokemon.kind1" placeholder="Tipo"/>
+
+          <input class="{{(pokemon.kind2 | lowercase) || 'default'}}" [(ngModel)]="pokemon.kind2" placeholder="Tipo"/>
+
+>>>>>>> 7952082d407500869a4fae7b3e6c04ce533a8cc0
+          <button class="cancel" (click)="cancel()"></button>
+          <button class="save" (click)="save()"></button>
+          <button class="left"  (click)="direction('l')"></button>
+          <button class="right" (click)="direction('r')"></button>
+          <button class="up"    (click)="direction('u')"></button>
+          <button class="down"  (click)="direction('d')"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
