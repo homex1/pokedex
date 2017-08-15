@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 
   save(): void {
     this.pokemonService.update(this.pokemon)
-      .then(() => alert("Pokemon guardado"));
+      .then(pokemon => alert("Pokemon guardado"));
       this.pokemon = null;
 
   }

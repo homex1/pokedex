@@ -29,7 +29,15 @@ export class PokemonService {
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error);
+    var errors = JSON.stringify(error._body);
+    console.log(errors['kind1']);
+
+    if(error._body !== undefined)
+    {
+      alert('An error occurred: ' + error._body);
+    }
+    //alert('An error occurred: ' + error);
+    console.error('An error occurred', error._body);
     return Promise.reject(error.message || error);
   }
 }

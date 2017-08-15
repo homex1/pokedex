@@ -75,8 +75,17 @@ img.pokemon {
 }
 .pokedex .kinds {
   padding-left: 140px;
-  font-size: 18px;
-  padding-top: 30px;
+  font-size: 14px;
+  padding-top: 23px;
+  width: 60px;
+}
+.pokedex .kinds input {
+  width: 80px;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 button.save{
