@@ -35,13 +35,17 @@ export class AppComponent implements OnInit {
   }
 
   cancel(): void {
-    this.pokemon.name  = this.original.name;
-    this.pokemon.kind1 = this.original.kind1;
-    this.pokemon.kind2 = this.original.kind2;
-    this.pokemon = null;
+    if(this.pokemon && this.original){
+      this.pokemon.mote = this.original.mote;
+      this.pokemon.kind1 = this.original.kind1;
+      this.pokemon.kind2 = this.original.kind2;
+      this.pokemon = null;
+      this.original = null;
+    }
   }
 
   onSelect(pokemon: Pokemon, index: number): void {
+    this.cancel()
     this.original = Object.assign({}, pokemon);
     this.pokemon  = pokemon;
   }
