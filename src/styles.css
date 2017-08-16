@@ -79,9 +79,12 @@ img.pokemon {
   width: 60px;
 }
 .pokedex .kinds .kind {
-
   margin-bottom: 10px;
+}
 
+div.kind {
+  padding: 2px 15px;
+  width: 80px;
 }
 
 .pokedex .kinds input {
