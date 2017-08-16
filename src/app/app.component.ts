@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Pokemon } from './pokemon';
 import { PokemonService } from './pokemon.service';
 
@@ -13,20 +13,9 @@ export class AppComponent implements OnInit {
   title = 'Pokedex';
   pokemones: Pokemon[];
   pokemon: Pokemon;
-  index: number = 0;
   original: Pokemon;
-  itemsPerRow: number = 12;
 
   constructor(private pokemonService: PokemonService) { }
-
-  @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {
-    var keys = {'37': 'l', '38': 'u', '39': 'r', '40': 'd'};
-    var dir = keys[event.keyCode];
-    if(dir) {
-      this.direction(dir);
-    }
-  }
 
   ngOnInit(): void {
     this.getPokemones();
@@ -55,21 +44,5 @@ export class AppComponent implements OnInit {
   onSelect(pokemon: Pokemon, index: number): void {
     this.original = Object.assign({}, pokemon);
     this.pokemon  = pokemon;
-    this.index    = index;
-  }
-
-  direction(dir: String): void {
-    switch(dir) {
-      case 'l' : this.index--; break;
-      case 'r' : this.index++; break;
-      case 'u' : this.index = this.index - this.itemsPerRow; break;
-      case 'd' : this.index = this.index + this.itemsPerRow; break;
-    }
-
-    if(this.index >= this.pokemones.length)
-      this.index = 0;
-    if(this.index < 0)
-      this.index = this.pokemones.length - 1;
-    this.pokemon = this.pokemones[this.index];
   }
 }

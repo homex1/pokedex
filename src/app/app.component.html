@@ -28,10 +28,6 @@
           <input class="{{(pokemon.kind2 | lowercase) || 'default'}} kind" [(ngModel)]="pokemon.kind2" placeholder="Tipo"/>
           <button class="cancel" (click)="cancel()"></button>
           <button class="save" (click)="save()"></button>
-          <button class="left"  (click)="direction('l')"></button>
-          <button class="right" (click)="direction('r')"></button>
-          <button class="up"    (click)="direction('u')"></button>
-          <button class="down"  (click)="direction('d')"></button>
         </div>
       </div>
     </div>
