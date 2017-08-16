@@ -24,8 +24,8 @@
           </div>
         </div>
         <div class="kinds">
-          <input class="{{pokemon.kind1 | lowercase}}" [(ngModel)]="pokemon.kind1" placeholder="Tipo"/>
-          <input class="{{(pokemon.kind2 | lowercase) || 'default' }}" [(ngModel)]="pokemon.kind2" placeholder="Tipo"/>
+          <input class="{{(pokemon.kind1 | lowercase) || 'default'}} kind" [(ngModel)]="pokemon.kind1" placeholder="Tipo"/>
+          <input class="{{(pokemon.kind2 | lowercase) || 'default'}} kind" [(ngModel)]="pokemon.kind2" placeholder="Tipo"/>
           <button class="cancel" (click)="cancel()"></button>
           <button class="save" (click)="save()"></button>
           <button class="left"  (click)="direction('l')"></button>
