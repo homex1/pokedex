@@ -36,7 +36,6 @@ img.pokemon {
   cursor: pointer;
 }
 
-
 /* Pokedex */
 .pokedex {
   background-image: url("/assets/images/pokedex.png");
@@ -53,11 +52,11 @@ img.pokemon {
   font-size: 18px;
   line-height: 85px;
   padding-left: 58px;
+  margin-top: 0;
 }
 .pokedex .image {
   text-align: center;
   padding-top: 10px;
-
 }
 .pokedex .image img {
   height: 160px;
