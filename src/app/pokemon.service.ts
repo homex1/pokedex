@@ -19,6 +19,15 @@ export class PokemonService {
                .catch(this.handleError);
   };
 
+    update(pokemon: Pokemon): Promise<Pokemon> {		
+      const url = `${this.baseUrl}/${pokemon.pokedex}`;
+      return this.http
+        .put(url, JSON.stringify(pokemon), {headers: this.headers})
+        .toPromise()
+        .then(pokemon => pokemon.json().pokemon as Pokemon)
+        .catch(this.handleError);
+    }
+
 
   private handleError(error: any): Promise<any> {
     var errors   = error.json();

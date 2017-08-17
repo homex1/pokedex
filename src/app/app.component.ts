@@ -3,6 +3,7 @@ import { Pokemon } from './pokemon';
 import { PokemonService } from './pokemon.service';
 import { HttpModule } from '@angular/http';
 
+
 @Component({
   selector: 'pokemones',
   templateUrl: './app.component.html',
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
   title = 'Pokedex';
   pokemones: Pokemon[];
   pokemon: Pokemon;
+  original: Pokemon;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -26,7 +28,28 @@ export class AppComponent implements OnInit {
   }
 
   onSelect(pokemon: Pokemon, index: number): void {
+    this.cancel();
+    this.original = Object.assign({}, pokemon);
     this.pokemon  = pokemon;
+  }
+
+  cancel(): void {
+    if(this.pokemon && this.original){
+      this.pokemon.mote = this.original.mote;
+      this.pokemon.kind1 = this.original.kind1;
+      this.pokemon.kind2 = this.original.kind2;
+      this.pokemon = null;
+      this.original = null;
+    }
+  }
+
+  save(): void {
+  this.pokemonService.update(this.pokemon)
+    .then((pokemon) => {
+      alert("Pokemon actualizado");
+      this.pokemon = pokemon;
+      this.pokemon = null;
+    });
   }
 
 }

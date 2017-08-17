@@ -20,12 +20,14 @@
         </div>
         <div class="mote">
           <div>
-            <div class="pokemon">{{pokemon.mote || pokemon.name}}</div>
+            <input class="pokemon" [(ngModel)]="pokemon.mote" placeholder="{{pokemon.name}}"/>
           </div>
         </div>
         <div class="kinds">
-          <div class="{{(pokemon.kind1 | lowercase) || 'default'}} kind">{{pokemon.kind1}}</div>
-          <div class="{{(pokemon.kind2 | lowercase) || 'default'}} kind">{{pokemon.kind2}}</div>
+          <input class="{{(pokemon.kind1 | lowercase) || 'default'}} kind" [(ngModel)]="pokemon.kind1" placeholder="Tipo"/>
+          <input class="{{(pokemon.kind2 | lowercase) || 'default'}} kind" [(ngModel)]="pokemon.kind2" placeholder="Tipo"/>
+          <button class="cancel" (click)="cancel()"></button>
+          <button class="save" (click)="save()"></button>
         </div>
       </div>
     </div>

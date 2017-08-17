@@ -3,6 +3,7 @@ import { NgModule }      from '@angular/core';
 import { HttpModule }    from '@angular/http';
 import { AppComponent }     from './app.component';
 import { PokemonService } from './pokemon.service';
+import { FormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { PokemonService } from './pokemon.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ PokemonService ],
   bootstrap: [ AppComponent ]
