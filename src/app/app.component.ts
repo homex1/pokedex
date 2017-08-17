@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Pokemon } from './pokemon';
 import { PokemonService } from './pokemon.service';
+import { HttpModule } from '@angular/http';
 
 @Component({
   selector: 'pokemones',
