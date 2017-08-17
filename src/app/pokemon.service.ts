@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { Pokemon } from './pokemon';
-import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()

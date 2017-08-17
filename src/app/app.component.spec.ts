@@ -1,6 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { Pokemon } from './pokemon';
 import { PokemonService } from './pokemon.service';
 import { HttpModule } from '@angular/http';
 
