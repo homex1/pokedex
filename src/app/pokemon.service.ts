@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-//import { Pokemon } from './pokemon';
+import { Pokemon } from './pokemon';
 import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -11,14 +11,14 @@ export class PokemonService {
 
   constructor(private http: Http) { }
 
-/*
+
   getPokemones(): Promise<Pokemon[]> {
     return this.http.get(this.baseUrl, {headers: this.headers})
                .toPromise()
                .then(response => response.json().pokemons as Pokemon[])
                .catch(this.handleError);
   };
-  */
+
 
   private handleError(error: any): Promise<any> {
     var errors   = error.json();
