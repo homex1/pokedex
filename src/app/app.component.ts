@@ -19,10 +19,10 @@ export class AppComponent implements OnInit {
 
   constructor(private pokemonService: PokemonService) { }
 
-  @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {
-    var keys = {'37': 'l', '38': 'u', '39': 'r', '40': 'd'};
-    var dir = keys[event.keyCode];
+  @HostListener('document:keydown', ['$event'])
+  public onWindowKeyPress(event: KeyboardEvent): void {
+    var keys = {'ArrowLeft': 'l', 'ArrowUp': 'u', 'ArrowRight': 'r', 'ArrowDown': 'd'};
+    var dir = keys[event.key];
     if(dir) {
       this.direction(dir);
     }
