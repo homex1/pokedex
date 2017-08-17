@@ -21,10 +21,12 @@ export class AppComponent implements OnInit {
 
   @HostListener('document:keydown', ['$event'])
   public onWindowKeyPress(event: KeyboardEvent): void {
-    var keys = {'ArrowLeft': 'l', 'ArrowUp': 'u', 'ArrowRight': 'r', 'ArrowDown': 'd'};
-    var dir = keys[event.key];
-    if(dir) {
-      this.direction(dir);
+    if(event.target == document.getElementsByTagName('body')[0]) {
+      var keys = {'ArrowLeft': 'l', 'ArrowUp': 'u', 'ArrowRight': 'r', 'ArrowDown': 'd'};
+      var dir = keys[event.key];
+      if(dir) {
+        this.direction(dir);
+      }
     }
   }
 
